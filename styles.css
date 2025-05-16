@@ -1,0 +1,277 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    background-color: #efd3b5;
+    color: #5f093d;
+  }
+
+  header {
+    background-color: #5f093d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    flex: 1;
+  }
+
+  .center-nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .center-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+  }
+
+  .center-nav a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #eeca7c;
+    border-radius: 50%;
+  }
+
+  .search-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .search-box {
+    width: 0;
+    padding: 10px;
+    border: 2px solid #efd3b5;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f8f8;
+    outline: none;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.4s ease;
+  }
+
+  .search-container:hover .search-box {
+    width: 200px;
+    opacity: 1;
+  }
+
+  .search-box::placeholder {
+    color: #5f093d;
+  }
+
+  .search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+  }
+
+  .welcome {
+    text-align: center;
+    ;
+    padding: 20px 20px;
+
+  }
+
+  .welcome h1 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .welcome p {
+    line-height: 1.6;
+
+  }
+
+  .proverb-section,
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: white;
+    border: 2px solid #b21368;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    perspective: 1000px;
+    transition: transform 0.8s;
+    border-radius: 10px;
+  }
+
+  .card-inner {
+    background-color: #d67ba8;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+    border-radius: 10px;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Noto Naskh Arabic', serif;
+  }
+
+  .card-back {
+    background-color: #b21368;
+    transform: rotateY(180deg);
+    color: white;
+    font-size: 0.9em;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .proverb-of-the-day {
+    text-align: center;
+    background-color: #b21368;
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+
+  .proverb-of-the-day h2 {
+    color: #efd3b5;
+  }
+
+.submit-section {
+  background-color: #efd3b5;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.submit-section h2 {
+  color: #5f093d;
+  margin-bottom: 20px;
+}
+
+.submit-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.submit-section input,
+.submit-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d67ba8;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit-section textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.submit-section button {
+  background-color: #b21368;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-section button:hover,
+.submit-section button:active {
+  background-color: #5f093d;
+}
+
+.about-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section h2 {
+  color: #5f093d;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  color: #5f093d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #d67ba8;
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: #efd3b5;
+  text-decoration: none;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
